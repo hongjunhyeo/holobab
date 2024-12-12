@@ -27,6 +27,7 @@ const SchoolList = () => {
         fetchTeachers();
     }, []);
 
+    //학생 리스트 가져오기
     useEffect(() => {
         const fetchStudents = async () => {
             try {
@@ -44,6 +45,18 @@ const SchoolList = () => {
         
             fetchStudents();
     }, []);
+
+    // 학생 선택 시 매칭된 교사 정보를 가져오는 함수
+    const handleStudentSelect = async (studentId) => {
+        setSelectedStudent(studentId); // 선택한 학생 ID 저장
+
+        try {
+            const response = await axios.get(`http://localhost:8090/api/listmanagement/....`);
+            setMatchingTeachers(response.data); // 매칭된 교사 리스트 상태 업데이트
+        } catch (err) {
+            setError("매칭된 교사를 불러오는 중 문제가 발생했습니다.");
+        }
+    };
 
     return (
         <div>
