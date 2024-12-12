@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {jwtDecode} from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from '../../Sidebar';
-
 
 const BASE_URL = "http://localhost:8090/api/managerInfo";
 
@@ -57,17 +55,14 @@ const ManagerInfo = () => {
   if (!managerInfo) return <p>매니저 정보를 찾을 수 없습니다.</p>;
 
   return (
-    <div className="mypage-body">
-    <div className="sidebar-container">
-      <Sidebar />
-    </div>
-      <form className='Info-container'>
+    <div>
+      <div>
         <h1>매니저 정보</h1>
         <p><strong>Address:</strong> {managerInfo.address || '정보 없음'}</p>
         <p><strong>Office Number:</strong> {managerInfo.officeNumber || '정보 없음'}</p>
         {managerInfo.schoolName && <p><strong>School Name:</strong> {managerInfo.schoolName}</p>}
         {managerInfo.college && <p><strong>College:</strong> {managerInfo.college}</p>}
-        </form>
+        </div>
       <div>
         <button onClick={onClickModify}>수정하기</button>
       </div>
