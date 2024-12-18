@@ -1,12 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
+import { useNavigate } from "react-router-dom";
 
 const Gallery = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     const [galleries, setGalleries] = useState([]);
     const [affiliation, setAffiliation] = useState(null);
+    const navigate = useNavigate();
+
     useEffect(() => {
         const fetchInfo = async () => {
             try{
@@ -22,15 +25,15 @@ const Gallery = () => {
                 // ROLE_NAME 변환
                 let roleName = 'unknown';
 
-                if (role === 'ROLE_SCHOOL_MANAGER') {
+                if (role.includes('ROLE_SCHOOL_MANAGER')) {
                     roleName = 'schoolManager';
-                } else if (role === 'ROLE_PROFESSOR') {
+                } else if (role.includes('ROLE_PROFESSOR')) {
                     roleName = 'professor';
-                } else if (role === 'ROLE_TEACHER') {
+                } else if (role.includes('ROLE_TEACHER')) {
                     roleName = 'teacher';
-                } else if (role === 'ROLE_STUDENT') {
+                } else if (role.includes('ROLE_STUDENT')) {
                     roleName = 'student';
-                } else if (role === 'ROLE_COLLEGE_MANAGER') {
+                } else if (role.includes('ROLE_COLLEGE_MANAGER')) {
                     roleName = 'collegeManager';
                 }
 
@@ -55,6 +58,10 @@ const Gallery = () => {
         fetchInfo();
     }, []);
 
+    const onClickGallerySave = () => {
+        navigate("/gallery/galleryWrite");
+      }
+
     return(
         <div>
             <h2>갤러리</h2>
@@ -68,6 +75,7 @@ const Gallery = () => {
                             <li key={gallery.boardID}>
                                 <h3>{gallery.title}</h3>
                                 <p>{gallery.writerName}</p>
+                                <p>{gallery.content}</p>
                                 <p>{gallery.date}</p>
                                 <ul>
                                     {gallery.files.map((file) => (
