@@ -1,0 +1,32 @@
+.mypage-body {
+    display: inline-flex;
+}
+  
+.sidebar-container{
+    width: 250px;
+}
+  
+.studentAttendance-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    height: 100vh; /* 전체 화면 높이를 채움 */
+    padding: 0 20px; /* 좌우 패딩 */
+    width: 100%; /* 전체 너비 */
+    max-width: 1600px; /* 최대 너비 1600px로 제한 */
+}
+
+.role-section {
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    width: fit-content; /* 내용에 맞게 너비 조정 */
+    height: auto; /* 높이를 내용에 맞게 설정 */
+    /* max-width: 100%; 너무 커지지 않도록 제한 (선택 사항) */
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
+  }
