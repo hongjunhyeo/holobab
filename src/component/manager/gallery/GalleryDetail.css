@@ -1,0 +1,110 @@
+.GalleryDetail-container {
+    flex-grow: 1; /* 남은 공간 차지 */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--green);
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px; /* 최대 너비 고정 */
+    min-width: 1000px; /* 최소 너비 고정 */
+    width: 100%; /* 너비를 100%로 설정 */
+    margin-top: 20px; /* 위쪽 여백 */
+    height: auto; /* 컨테이너의 높이를 내용에 맞게 설정 */
+    min-height: 400px; /* 최소 높이 설정 */
+}
+
+.GalleryDetail-container .board-form {
+    width: 1000px;
+}
+
+.board-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.board-detail-table th {
+    text-align: left;
+    padding: 10px;
+    font-size: 24px;
+    color: #333;
+}
+  
+.board-detail-table th.board-title-header {
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+}
+  
+.board-detail-table td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    vertical-align: top;
+}
+  
+.board-detail-table td.label {
+    font-weight: bold;
+    color: #555;
+    width: 30%;
+}
+  
+.board-detail-table td.label2 {
+    font-weight: bold;
+    color: #555;
+    width: 30%;
+    height: 300px;
+}
+  
+.board-content {
+    line-height: 1.6;
+    color: #444;
+}
+  
+.board-files p {
+    margin: 0;
+    line-height: 1.4;
+}
+  
+.board-buttons {
+    margin-top: 20px;
+    text-align: right;
+}
+  
+.board-update-button {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 3px;
+}
+  
+.board-delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 3px;
+}
+  
+.board-list-button {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 3px;
+}
+
+.GalleryDetail-container .img-content {
+    width: 800px;
+    height: 400px;
+    overflow: hidden; /* 컨테이너 영역 밖의 내용 숨기기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GalleryDetail-container .img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

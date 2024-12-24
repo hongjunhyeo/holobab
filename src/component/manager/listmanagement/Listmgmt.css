@@ -1,0 +1,49 @@
+.listmgmt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 중앙 정렬 */
+  min-height: 80vh; /* 화면 높이에 따라 비율로 설정 */
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.listmgmt-body {
+  width: 100%;
+  max-width: 1600px; /* 고정된 최대 너비 설정 */
+  min-width: 1400px; /* 최소 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* 사이드바와 본문 간격 */
+  flex-wrap: wrap; /* 작은 화면에서 컬럼으로 바뀌게 */
+  padding: 20px; /* 여백 추가 */
+  background-color: white; /* 배경색 추가 */
+  border-radius: 10px;
+}
+
+/* Sidebar */
+.listmgmt-sidebar {
+  width: 320px; /* 사이드바 고정 크기 */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+.listsection-container {
+  flex-grow: 1; /* 남은 공간 차지 */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--green);
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px; /* 최대 너비 고정 */
+  min-width: 1000px; /* 최소 너비 고정 */
+  width: 100%; /* 너비를 100%로 설정 */
+  margin-top: 20px; /* 위쪽 여백 */
+  height: auto; /* 컨테이너의 높이를 내용에 맞게 설정 */
+  min-height: 400px; /* 최소 높이 설정 */
+}

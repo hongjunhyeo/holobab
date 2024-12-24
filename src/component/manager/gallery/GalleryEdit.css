@@ -1,0 +1,105 @@
+.galleryModify-container {
+    flex-grow: 1; /* 남은 공간 차지 */
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--green);
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px; /* 최대 너비 고정 */
+    min-width: 1000px; /* 최소 너비 고정 */
+    width: 100%; /* 너비를 100%로 설정 */
+    margin-top: 20px; /* 위쪽 여백 */
+    height: auto; /* 컨테이너의 높이를 내용에 맞게 설정 */
+    min-height: 400px; /* 최소 높이 설정 */
+}
+
+.galleryModify-container .Modify-form {
+    width: 1000px;
+}
+
+/* 제목 */
+.galleryModify-container .galleryModify-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+  
+/* 입력 폼 */
+.galleryModify-container .Modify-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+  
+/* 제목 입력 */
+.galleryModify-container .write-input {
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+/* 파일 추가 버튼 */
+.file-add-button {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+  
+.file-add-button:hover {
+    background-color: #0056b3;
+}
+  
+/* 파일 리스트 */
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+  
+.file-item {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+  
+/* 작성 버튼 */
+.detail-edit {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+.detail-edit:hover {
+    background-color: #218838;
+}  
+
+.galleryModify-container .file-item {
+    width: 800px;
+    height: 400px;
+    overflow: hidden; /* 컨테이너 영역 밖의 내용 숨기기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryModify-container .img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

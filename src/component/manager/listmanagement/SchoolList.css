@@ -1,0 +1,44 @@
+.SchoolList-wrapper .SchoolList-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.SchoolList-wrapper .SchoolList-container {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.SchoolList-wrapper .SchoolList-detail {
+    list-style-type: none;
+    padding: 0;
+}
+
+.SchoolList-wrapper .SchoolList-detail li {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.SchoolList-wrapper .matchByStudent {
+    font-size: 1.5rem;
+}
+
+.SchoolList-wrapper .SchoolList-detail span {
+    display: inline; /* 항목들을 한 줄로 배치 */
+    margin-right: 10px; /* 항목 간 간격을 추가 */
+}
+
+.SchoolList-wrapper .SchoolList-name {
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.SchoolList-wrapper .SchoolList-email, .SchoolList-school, .SchoolList-subject {
+    font-size: 1rem;
+    color: #555;
+}
