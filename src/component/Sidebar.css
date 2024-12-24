@@ -1,0 +1,191 @@
+/* Variables for colors */
+:root {
+  --red: #EF6161;
+  --green: #7ac142;
+  --text-color: rgba(0, 0, 0, 0.8);
+  --placeholder-color: rgba(0, 0, 0, 0.5);
+  --box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 81px; /* 헤더 높이만큼 내리기 */
+  left: 0;
+  width: 250px; /* 사이드바 폭 증가 */
+  height: calc(100vh - 60px); /* 전체 화면에서 헤더 높이만큼 빼주기 */
+  background-color: #fff; /* 배경을 화이트로 설정 */
+  padding: 20px;
+  box-shadow: var(--box-shadow); /* 기존 box-shadow 적용 */
+  overflow-y: auto;
+  border-right: 5px solid var(--green); /* 사이드바에 그린 테두리 추가 */
+  border-radius: 10px;
+}
+
+/* Sidebar List Styling */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+/* Sidebar Links */
+.sidebar a {
+  display: block;
+  padding: 12px 15px;
+  background-color: #fff;
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 8px; /* 항목 간 간격 추가 */
+}
+
+.sidebar a:hover {
+  background-color: var(--green); /* 그린 배경색 */
+  color: #fff; /* 텍스트 색상 흰색 */
+}
+
+/* Disabled Link Styling */
+.sidebar .disabled-link {
+  pointer-events: none;
+  background-color: #f0f0f0; /* 비활성화된 링크는 회색으로 */
+  color: #ccc; /* 비활성화된 링크 색상 */
+}
+
+.sidebar .disabled-link:hover {
+  background-color: #f0f0f0; /* 비활성화된 상태에서 hover 효과 없음 */
+}
+
+/* Sidebar Role Section (Matching Allowed/Not) */
+.sidebar .role-section {
+  margin-top: 20px;
+}
+
+/* Error Message */
+.sidebar .error-message {
+  color: var(--red);
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 90%; /* 모바일에서 사이드바 폭을 90%로 */
+    padding: 10px;
+  }
+}
+/* Sidebar 스크롤바 스타일 */
+.sidebar {
+  /* 기존 스타일들 */
+  overflow-y: auto; /* 세로 스크롤을 활성화 */
+  height: 100vh; /* 사이드바의 전체 높이 */
+}
+
+/* 스크롤바 자체 */
+.sidebar::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 */
+  height: 8px; /* 수평 스크롤바 너비 */
+}
+
+/* 스크롤바 트랙 (배경) */
+.sidebar::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* 트랙 배경색 */
+  border-radius: 10px; /* 트랙의 둥근 모서리 */
+}
+
+/* 스크롤바 썸 (실제 스크롤이 가능한 부분) */
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgb(126, 255, 158); /* 썸의 배경색 */
+  border-radius: 10px; /* 썸의 둥근 모서리 */
+}
+
+/* 스크롤바 썸에 마우스를 올렸을 때 */
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #7ac142; /* 썸에 마우스를 올렸을 때 색상 */
+}
+
+/* 기존 사이드바 스타일에 추가 */
+
+/* 사이드바 열리고 닫히는 상태에 따른 스타일 */
+.sidebar.closed {
+  transform: translateX(-100%); /* 사이드바 숨기기 */
+}
+
+.sidebar.open {
+  transform: translateX(0); /* 사이드바 보이기 */
+  transition: transform 0.3s ease; /* 애니메이션 효과 */
+}
+
+/* 사이드바 전체 레이아웃을 감싸는 wrapper */
+.sidebar-wrapper {
+  position: relative;
+  display: flex;
+}
+
+/* 사이드바 */
+.sidebar {
+  position: fixed;
+  top: 81px; /* 헤더 높이만큼 내리기 */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  overflow-y: auto;
+  border-right: 5px solid var(--green);
+  border-radius: 10px;
+  transform: translateX(-100%); /* 사이드바가 닫혔을 때 숨기기 */
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+/* 사이드바 열리면 나타나도록 */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* 사이드바 버튼 (열기/닫기) */
+.sidebar-toggle {
+  position: fixed;
+  top: 50%;
+  left: calc(250px); /* 사이드바의 너비 + 약간의 간격 */
+  transform: translateY(-50%);
+  background-color: #7ac142;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 999;
+  transition: left 0.3s ease; /* 버튼 위치 애니메이션 추가 */
+}
+
+/* 버튼 호버 상태 */
+.sidebar-toggle:hover {
+  background-color: #5a9f2f;
+}
+
+/* 사이드바 닫힐 때 버튼 위치 조정 */
+.sidebar.closed + .sidebar-toggle {
+  left: 0px; /* 사이드바가 닫혔을 때 버튼 위치 */
+}
+
+/* 모바일 화면에서 사이드바 폭 조정 */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 80%;
+  }
+
+  .sidebar-toggle {
+    left: calc(80% + 10px); /* 모바일 화면에서도 버튼이 사이드바 옆에 있도록 조정 */
+  }
+}

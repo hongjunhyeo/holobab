@@ -1,0 +1,64 @@
+/* OperationModel.css */
+
+.operation-model-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #AACDFF;
+    box-shadow: 7px 7px 39px rgba(0, 104, 255, 0.25);
+    border-radius: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .model-structure,
+  .steps,
+  .roles-responsibilities,
+  .advantages {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    color: #004080;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #AACDFF;
+    padding-bottom: 5px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+  
+  li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+  }
+  

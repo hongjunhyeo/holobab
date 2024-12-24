@@ -1,0 +1,19 @@
+.address-button {
+    background-color: var(--green);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.2s ease-out;
+    white-space: nowrap; /* 텍스트를 한 줄로 표시 */
+    text-overflow: ellipsis; /* 텍스트가 넘칠 경우 '...'으로 표시 */
+    overflow: hidden; /* 넘치는 텍스트 숨기기 */
+}
+
+.address-button:hover {
+    background-color: #fff;
+    color: var(--green);
+    border: 1px solid var(--green);
+}
