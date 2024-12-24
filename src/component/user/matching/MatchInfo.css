@@ -1,0 +1,87 @@
+/* 전체 페이지 스타일 */
+.match-info-body {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 중앙 정렬 */
+  min-height: 70vh;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 메인 컨테이너 스타일 */
+.match-info-container {
+  width: 100%;
+  max-width: 1200px; /* 최대 너비 고정 */
+  min-width: 1000px; /* 최소 너비 고정 */
+  border-top: 5px solid var(--green);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  box-sizing: border-box;
+  
+}
+
+/* 섹션들을 가로로 정렬 */
+.match-info-boxes {
+  display: flex;
+  justify-content: space-between; /* 양 끝 정렬 */
+  gap: 20px; /* 두 박스 사이 여백 */
+}
+
+/* 각 섹션 박스 스타일 */
+.info-box {
+  flex: 1; /* 두 박스 동일한 너비로 */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.info-box h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333333;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 10px;
+}
+
+.info-box p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 8px 0;
+  color: #555555;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #fd0000;
+  border: 2px solid #fd0000;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #ffffff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .match-info-boxes {
+    flex-direction: column; /* 화면이 작을 때 세로로 정렬 */
+  }
+}

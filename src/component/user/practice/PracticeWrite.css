@@ -1,0 +1,117 @@
+/* 게시글 작성 페이지 스타일 */
+.write-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  /* 요소들이 세로로 배치되도록 수정 */
+  min-height: 60vh;
+  background-color: #f4f4f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.write-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* 폼 컨테이너 */
+.write-form {
+  width: 100%;
+  max-width: 1200px; /* 최대 너비 고정 */
+  min-width: 800px; /* 최소 너비 수정 */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* 폼 내의 요소들을 세로로 정렬 */
+  gap: 20px; /* 폼 요소 간의 간격 */
+}
+
+/* 제목 입력 필드 */
+.write-input, .write-textarea, .submit-button, .file-add-button {
+  width: 100%;
+  padding: 12px;  /* 모든 입력 및 버튼의 패딩을 동일하게 설정 */
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* 제목 입력 필드 */
+.write-input {
+  font-size: 1.2rem;
+  margin-bottom: 10px;  /* 제목 필드와 다른 요소 간 간격 */
+}
+
+/* 내용 입력 필드 */
+.write-textarea {
+  height: 200px;
+  resize: vertical; /* 세로로만 크기 조정 */
+}
+
+/* 파일 추가 버튼 */
+.file-add-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex; /* Flexbox 사용 */
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.file-add-button:hover {
+  background-color: #333333;
+}
+
+/* 파일 리스트 */
+.file-list {
+  margin-top: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.file-item {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* 제출 버튼 */
+.submit-button {
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #4f5b92;
+}
+
+.submit-button:active {
+  background-color: #3e4b7a;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .write-form {
+    padding: 20px;
+  }
+
+  .write-input, .write-textarea, .submit-button, .file-add-button {
+    font-size: 0.9rem; /* 폰트 크기 조정 */
+  }
+}

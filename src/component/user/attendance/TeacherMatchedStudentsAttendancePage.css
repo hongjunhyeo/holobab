@@ -1,0 +1,110 @@
+/* 전체 페이지 스타일 */
+.teachermatchedstudentattendance-body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
+.sidebar-container {
+  margin-right: 20px;
+}
+
+/* 매칭된 학생 출석 기록 페이지 컨테이너 */
+.teachermatchedstudentattendance-container {
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  border-top: 5px solid var(--green);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+/* 제목 */
+.teachermatchedstudentattendance-container h2 {
+  font-size: 1.6rem;  /* 글씨 크기 줄임 */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+  font-size: 0.95rem; /* 글씨 크기 줄임 */
+  color: #333;
+}
+
+td {
+  background-color: #f9f9f9;
+  font-size: 0.85rem;  /* 글씨 크기 줄임 */
+  color: #666;
+}
+
+td:first-child {
+  text-align: left; /* 첫 번째 열은 왼쪽 정렬 */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* 테이블 행에 마우스를 올리면 배경색 변경 */
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa; /* 짝수 행에 배경색 변경 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .teachermatchedstudentattendance-container {
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teachermatchedstudentattendance-container h2 {
+    font-size: 1.4rem;  /* 모바일에서 제목 글씨 더 줄임 */
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}

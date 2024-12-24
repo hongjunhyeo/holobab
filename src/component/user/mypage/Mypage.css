@@ -1,0 +1,269 @@
+/* MyPage 전용 스타일 */
+.mypage-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 중앙 정렬 */
+  min-height: 80vh; /* 화면 높이에 따라 비율로 설정 */
+  background-color: white;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* MyPage Body */
+.mypage-body {
+  width: 100%;
+  max-width: 1600px; /* 고정된 최대 너비 설정 */
+  min-width: 1400px; /* 최소 너비 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* 사이드바와 본문 간격 */
+  flex-wrap: wrap; /* 작은 화면에서 컬럼으로 바뀌게 */
+  padding: 20px; /* 여백 추가 */
+  background-color: white; /* 배경색 추가 */
+  border-radius: 10px;
+}
+
+/* Sidebar */
+.mypage-sidebar {
+  width: 320px; /* 사이드바 고정 크기 */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content */
+.mypage-container {
+  flex-grow: 1; /* 남은 공간 차지 */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--green);
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px; /* 최대 너비 고정 */
+  min-width: 1000px; /* 최소 너비 고정 */
+  width: 100%; /* 너비를 100%로 설정 */
+  margin-top: 20px; /* 위쪽 여백 */
+  height: auto; /* 컨테이너의 높이를 내용에 맞게 설정 */
+  min-height: 400px; /* 최소 높이 설정 */
+}
+
+/* Title */
+.mypage-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Role Section */
+.role-section {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.role-title {
+  font-size: 1.8rem;
+  color: var(--green);
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* User Info */
+.user-info {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--input-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info:last-child {
+  border-bottom: none;
+}
+
+.user-info-label {
+  font-weight: bold;
+  color: var(--text-color);
+  width: 120px;
+}
+
+.user-info-value {
+  color: var(--text-color);
+  flex-grow: 1;
+  text-align: right;
+}
+
+.mypageinput[type="text"], input[type="number"] {
+  width: 70%;
+  padding: 8px 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: border-color 0.3s;
+  text-align: right;
+}
+
+.mypageinput[type="text"]:focus, input[type="number"]:focus {
+  border-color: var(--green);
+}
+
+.mypageinput{
+  background-color: #f4f4f9;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mypage-button {
+  padding: 12px 20px;
+  background-color: #fff;
+  color: green;
+  border: 2px solid var(--green);
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  
+}
+
+.mypage-button:hover {
+  background-color: #fff;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.mypage-button:focus {
+  outline: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .mypage-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mypage-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mypage-container {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mypage-title {
+    font-size: 2rem;
+  }
+
+  .role-title {
+    font-size: 1.4rem;
+  }
+
+  .mypage-button {
+    font-size: 14px;
+  }
+}
+
+/* 비밀번호 입력 모달 */
+.password-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+}
+
+/* 모달 헤더 */
+.password-modal h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* 입력 필드 스타일 */
+.password-modal input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* 버튼 스타일 */
+.password-modal button {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #4CAF50;
+  border: 2px solid #4CAF50;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+/* 버튼 hover 효과 */
+.password-modal button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* 취소 버튼 스타일 */
+.password-modal button:last-child {
+  background-color: white;
+  color: #f44336;
+  border: 2px solid #f44336;
+}
+
+.password-modal button:last-child:hover {
+  background-color: #d32f2f;
+  color: white
+}
+
+/* 배경 스타일 */
+.password-modal::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 3px solid #7ac142;
+  border-radius: 50px;
+  z-index: -1;
+}
